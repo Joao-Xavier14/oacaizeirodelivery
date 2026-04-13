@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- Mirrored from 3000-i41rqgq1embiz2xtu9ce3-18e660f9.sandbox.novita.ai/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Apr 2026 20:51:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Açaizeiro Delivery — Cardápio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫐</text></svg>">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../cdn.jsdelivr.net/npm/%40fortawesome/fontawesome-free%406.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com/"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            roxo: {
+              50:  '#f5f0f9',
+              100: '#ecdff4',
+              200: '#d5b8e8',
+              300: '#bd8fd9',
+              400: '#a866c9',
+              500: '#8a3db7',
+              600: '#6b2a8f',
+              700: '#521e6e',
+              800: '#3d1652',
+              900: '#2a0e38',
+            },
+            amarelo: {
+              400: '#f9c846',
+              500: '#f5b400',
+              600: '#e0a000',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="static/styles.css" />
+</head>
+
+<body class="min-h-screen" style="background: #1a0a2e; font-family: 'Poppins', sans-serif;">
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="header-bg"></div>
+    <div class="header-content">
+      <!-- Logo -->
+      <div class="logo-wrapper">
+        <div class="logo-icon">🫐</div>
+        <div class="logo-text">
+          <span class="logo-main">O Açaizeiro</span>
+          <span class="logo-sub">Delivery</span>
+        </div>
+      </div>
+
+      <!-- Slogan -->
+      <p class="header-slogan">
+        <i class="fas fa-leaf mr-1"></i> Delicioso e Nutritivo
+        <i class="fas fa-motorcycle ml-3 mr-1"></i> Entregamos na sua porta!
+      </p>
+
+      <!-- Navegação por abas -->
+      <nav class="tab-nav" id="tabNav">
+        <button class="tab-btn active" data-category="copos">
+          🥤 Copos de Açaí
+        </button>
+        <button class="tab-btn" data-category="salada-frutas">
+          🍓 Salada de Frutas
+        </button>
+        <button class="tab-btn" data-category="milk-shake">
+          🥛 Milk Shake
+        </button>
+        <button class="tab-btn" data-category="adicionais">
+          ✨ Adicionais
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-container">
+
+    <!-- ===== BANNER HERO ===== -->
+    <section class="hero-banner">
+      <div class="hero-particles" id="heroParticles"></div>
+      <div class="hero-content">
+        <h2 class="hero-title">Bem-vindo ao<br><strong>Açaizeiro!</strong></h2>
+        <p class="hero-sub">Açaí fresquinho, cremoso e cheio de sabor.<br>Peça agora e receba em casa! 🚀</p>
+        <button class="hero-btn" onclick="scrollToMenu()">
+          <i class="fas fa-utensils mr-2"></i>Ver Cardápio
+        </button>
+      </div>
+      <div class="hero-image-area">
+        <div class="hero-bowl">🫐</div>
+        <div class="floating-chip chip-1">R$ 15,00</div>
+        <div class="floating-chip chip-2">330ml</div>
+        <div class="floating-chip chip-3">🍓 Turbinado</div>
+      </div>
+    </section>
+
+    <!-- ===== MENU SECTION ===== -->
+    <section class="menu-section" id="menuSection">
+
+      <!-- COPOS -->
+      <div class="category-panel active" id="panel-copos">
+        <div class="panel-header">
+          <h2>🥤 Copos de Açaí</h2>
+          <p>Açaí batido no liquidificador — fica como uma vitamina!</p>
+        </div>
+
+        <div class="tamanhos-grid" id="copesGrid">
+          <!-- preenchido via JS -->
+        </div>
+
+        <!-- Adicionais Grátis -->
+        <div class="adicionais-section">
+          <div class="adicionais-gratis-card">
+            <div class="adicionais-titulo">
+              <i class="fas fa-gift"></i> Adicionais Grátis
+            </div>
+            <div class="adicionais-gratis-list" id="adicionaisGratisList">
+              <!-- preenchido via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SALADA DE FRUTAS -->
+      <div class="category-panel" id="panel-salada-frutas">
+        <div class="panel-header">
+          <h2>🍓 Salada de Frutas</h2>
+          <p>Leite Condensado, Creme de Leite, Banana, Morango, Maçã e Mamão</p>
+        </div>
+
+        <div class="tamanhos-grid" id="saladaGrid">
+          <!-- preenchido via JS -->
+        </div>
+      </div>
+
+      <!-- MILK SHAKE -->
+      <div class="category-panel" id="panel-milk-shake">
+        <div class="panel-header">
+          <h2>🥛 Milk Shake de Açaí</h2>
+          <p>Garrafa de 500ml — cremoso e irresistível!</p>
+        </div>
+
+        <div class="milkshake-grid" id="milkShakeGrid">
+          <!-- preenchido via JS -->
+        </div>
+      </div>
+
+      <!-- ADICIONAIS ESPECIAIS -->
+      <div class="category-panel" id="panel-adicionais">
+        <div class="panel-header">
+          <h2>✨ Adicionais Especiais</h2>
+          <p>Deixe seu açaí ainda mais delicioso com nossos extras!</p>
+        </div>
+
+        <div class="adicionais-especiais-container" id="adicionaisEspeciaisContainer">
+          <!-- preenchido via JS -->
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span>🫐</span>
+        <div>
+          <p class="footer-brand">O Açaizeiro</p>
+          <p class="footer-tagline">Delivery</p>
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 O Açaizeiro Delivery · Todos os direitos reservados</p>
+      <p class="footer-whats">
+        <i class="fab fa-whatsapp"></i> Peça pelo WhatsApp
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL PRODUTO ===== -->
+  <div id="produtoModal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../cdn.jsdelivr.net/npm/axios%401.6.0/dist/axios.min.js"></script>
+  <script src="static/app.js"></script>
+</body>
+
+<!-- Mirrored from 3000-i41rqgq1embiz2xtu9ce3-18e660f9.sandbox.novita.ai/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 13 Apr 2026 20:51:30 GMT -->
+</html>
